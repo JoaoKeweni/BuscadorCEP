@@ -1,4 +1,4 @@
-package models;
+package br.com.joao.buscadorcep.models;
 
 import java.io.IOException;
 import java.net.URI;

@@ -1,8 +1,8 @@
-package org.example;
+package br.com.joao.buscadorcep.main;
 
 import java.io.IOException;
 import java.util.Scanner;
-import models.Requisicao;
+import br.com.joao.buscadorcep.models.Requisicao;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {

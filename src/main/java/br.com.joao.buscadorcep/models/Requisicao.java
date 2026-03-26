@@ -8,7 +8,7 @@ import java.net.http.HttpResponse;
 
 public class Requisicao {
 
-    public void requisicaoApi(String cep) throws IOException, InterruptedException {
+    public String requisicaoApi(String cep) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://viacep.com.br/ws/" + cep + "/json/"))
@@ -16,6 +16,6 @@ public class Requisicao {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body());
+        return response.body();
     }
 }

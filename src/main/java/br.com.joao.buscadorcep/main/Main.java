@@ -10,6 +10,7 @@ public class Main {
         Scanner leitura = new Scanner(System.in);
         String opcao = "";
         String cep;
+        String endereco;
         do {
             System.out.println("1- Buscar pelo CEP");
             System.out.println("2- Baixar JSON");
@@ -23,7 +24,8 @@ public class Main {
                     cep = leitura.nextLine();
                     // TODO: criar metodo de buscar o cep usando cep digitado
                     Requisicao consulta = new Requisicao();
-                    consulta.requisicaoApi(cep);
+                    endereco = consulta.requisicaoApi(cep);
+                    System.out.println(endereco);
                     break;
                 case "2":
                     System.out.println("Digite o CEP: ");

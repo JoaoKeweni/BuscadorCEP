@@ -22,14 +22,18 @@ public class Main {
                 case "1":
                     System.out.println("Digite o CEP: ");
                     cep = leitura.nextLine();
-                    // TODO: criar metodo de buscar o cep usando cep digitado
                     Requisicao consulta = new Requisicao();
                     enderecoJson = consulta.requisicaoApi(cep);
                     System.out.println(enderecoJson);
                     break;
                 case "2":
-                    Requisicao salvar = new Requisicao();
-                    salvar.salvarJson(enderecoJson, cep);
+                    if (enderecoJson.isEmpty()){
+                        System.out.println("Digite um CEP antes de tentar baixar");
+                    }else {
+                        Requisicao salvar = new Requisicao();
+                        salvar.salvarJson(enderecoJson, cep);
+                        System.out.println("Arquivo salvo com sucesso...");
+                    }
                     break;
                 case "3":
                     System.out.println("Saindo...");

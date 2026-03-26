@@ -20,7 +20,7 @@ public class Requisicao {
         return response.body();
     }
     public void salvarJson (String enderecoJson, String cep) throws IOException {
-        FileWriter escrever = new FileWriter("Endereco " + cep);
+        FileWriter escrever = new FileWriter("Endereco " + cep + ".json");
         escrever.write(enderecoJson);
         escrever.close();
     }
